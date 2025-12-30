@@ -1,6 +1,7 @@
 def main():
     with open("input.txt", 'r') as input_file, open("output.txt", 'w') as output_file: # открываем файлы для чтения и записи
         lines = input_file.read().splitlines() # берём весь текст из input_file и разбиваем на строки (splitlines по \n)
+        # идея: так как количество островов не велико, то можно воспользоваться обычным DFS для поиска максимальной суммы
 
         # берём значения из строк через split (получая list) и приводим их к типу int через map функции
         n, m = map(int, lines[0].split())
